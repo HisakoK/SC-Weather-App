@@ -27,6 +27,7 @@ small {
     font-weight: 500;
 }
 
+.local-time,
 .day_of_week,
 .weather-cnd {
     margin-top: 15px;
