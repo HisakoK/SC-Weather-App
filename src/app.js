@@ -30,6 +30,7 @@ function showTemperature(response) {
     document.querySelector("#min-temp").innerHTML = Math.round(response.data.main.temp_min);
     document.querySelector("#clouds").innerHTML = response.data.clouds.all;
     document.querySelector("#description").innerHTML = response.data.weather[0].main;
+    document.querySelector("#weather-icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 function showCity(city) {
