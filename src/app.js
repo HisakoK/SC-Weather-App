@@ -22,7 +22,6 @@ let date = `${currentDay} ${currentHour}:${currentMin}`;
 p.innerHTML = `${date}`;
 
 function showTemperature(response) {
-    console.log(response.data);
     document.querySelector("#city").innerHTML = response.data.name;
     document.querySelector("#temperature").innerHTML = Math.round(
         response.data.main.temp);
@@ -33,10 +32,12 @@ function showTemperature(response) {
     document.querySelector("#weather-icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
+
 function showCity(city) {
     let apiKey = "d6d5227874685b1ce6a21a8ee1d3034d";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(showTemperature);
+
 }
 
 function showArea(event) {

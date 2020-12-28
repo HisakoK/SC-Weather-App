@@ -67,27 +67,17 @@ small {
 .weather-icon img {
     height: 150px;
     max-width: 200px;
-    margin-top: 50px;
+    margin-bottom: 50px;
     margin-left: 150px;
     padding: 0 auto;
 }
 
+.humidity,
+.wind-speed {
+    line-height: 15%;
+    margin-bottom: 15px;
+}
+
 .weather-cnd {
     text-transform: capitalize;
-}
-
-.card-body3 {
-    font-size: 25px;
-    margin-top: 15px;
-    padding: 20px;
-}
-
-.card-body3 .fa-sun {
-    color: #ffcd3c;
-    font-size: 40px;
-    text-align: center;
-}
-
-.days {
-    text-align-last: justify;
 }
