@@ -22,10 +22,14 @@ let date = `${currentDay} ${currentHour}:${currentMin}`;
 p.innerHTML = `${date}`;
 
 function showTemperature(response) {
+    console.log(response.data);
     document.querySelector("#city").innerHTML = response.data.name;
     document.querySelector("#temperature").innerHTML = Math.round(
-        response.data.main.temp
-    );
+        response.data.main.temp);
+    document.querySelector("#max-temp").innerHTML = Math.round(response.data.main.temp_max);
+    document.querySelector("#min-temp").innerHTML = Math.round(response.data.main.temp_min);
+    document.querySelector("#clouds").innerHTML = response.data.clouds.all;
+    document.querySelector("#description").innerHTML = response.data.weather[0].main;
 }
 
 function showCity(city) {

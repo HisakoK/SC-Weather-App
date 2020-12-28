@@ -70,6 +70,10 @@ small {
     text-align: center;
 }
 
+.weather-cnd {
+    text-transform: capitalize;
+}
+
 .card-body3 {
     font-size: 25px;
     margin-top: 15px;
